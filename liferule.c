@@ -145,7 +145,10 @@ int main(void) {
         FillAtom(surface, atoms3[i]);
     }
 
-   double current_force[3][3] = {{1,-1,-1},{-1,1,-1},{-1,-1,1}};
+   double current_force[3][3] = {
+   {random_double(-2, 2, 1000000l),-1,-1},
+   {-1,random_double(-2, 2, 1000000l),-1},
+   {-1,-1,random_double(-2, 2, 1000000l)}};
 
    int tick_count = 0;
     //
